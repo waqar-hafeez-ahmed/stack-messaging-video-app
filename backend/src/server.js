@@ -1,5 +1,5 @@
 // const express = require("express"); //type:common.js
-import "../instrument.mjs";
+// import "../instrument.mjs";
 import express from "express"; //type:module
 import { ENV } from "./config/env.js";
 import { connectDB } from "./config/db.js";
