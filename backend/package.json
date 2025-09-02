@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "src/server.js",
   "scripts": {
-    "start": "NODE_OPTIONS='--import ./instrument.mjs' nodemon src/server.js",
-    "dev": "NODE_OPTIONS='--import ./instrument.mjs' nodemon src/server.js"
+    "start": "cross-env NODE_OPTIONS=\"--import ./instrument.mjs\" node src/server.js",
+    "dev": "cross-env NODE_OPTIONS=\"--import ./instrument.mjs\" nodemon src/server.js"
   },
   "type": "module",
   "dependencies": {
