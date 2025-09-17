@@ -11,6 +11,7 @@ const STREAM_API_KEY = import.meta.env.VITE_STREAM_API_KEY;
 // so that users can see each other's messages, send messages to each other, get realtime updates, etc.
 // it also handles  the disconnection when the user leaves the page
 
+console.log("STREAM_API_KEY", STREAM_API_KEY);
 export const useStreamChat = () => {
   const { user } = useUser();
   const [chatClient, setChatClient] = useState(null);
