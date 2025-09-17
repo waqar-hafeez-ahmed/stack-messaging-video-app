@@ -17,8 +17,8 @@ import {
 import "../styles/stream-chat-theme.css";
 import { HashIcon, PlusIcon, UsersIcon } from "lucide-react";
 import CreateChannelModal from "../components/CreateChannelModal";
-// import CustomChannelPreview from "../components/CustomChannelPreview";
-// import UsersList from "../components/UsersList";
+import CustomChannelPreview from "../components/CustomChannelPreview";
+import UsersList from "../components/UsersList";
 // import CustomChannelHeader from "../components/CustomChannelHeader";
 
 const HomePage = () => {
@@ -72,7 +72,7 @@ const HomePage = () => {
                   </button>
                 </div>
 
-                {/* <ChannelList
+                <ChannelList
                   filters={{ members: { $in: [chatClient?.user?.id] } }}
                   options={{ state: true, watch: true }}
                   Preview={({ channel }) => (
@@ -115,22 +115,22 @@ const HomePage = () => {
                       <UsersList activeChannel={activeChannel} />
                     </div>
                   )}
-                /> */}
+                />
               </div>
             </div>
           </div>
 
           {/* RIGHT CONTAINER */}
           <div className="chat-main">
-            {/* <Channel channel={activeChannel}>
+            <Channel channel={activeChannel}>
               <Window>
-                <CustomChannelHeader />
+                {/* <CustomChannelHeader /> */}
                 <MessageList />
                 <MessageInput />
               </Window>
 
               <Thread />
-            </Channel> */}
+            </Channel>
           </div>
         </div>
 
