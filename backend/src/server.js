@@ -8,11 +8,13 @@ import { functions, inngest } from "./config/injest.js";
 import { serve } from "inngest/express";
 import chatRoutes from "./routes/chat.route.js";
 import * as Sentry from "@sentry/node";
+import cors from "cors";
 
 const app = express();
 const PORT = ENV.PORT;
 
 app.use(express.json());
+app.use(cors({ origin: "http://localhost:5173", credentials: true })); // Enable CORS for all routes
 app.use(clerkMiddleware()); //req.auth will be available
 app.get("/debug-sentry", (req, res) => {
   throw new Error("Debug first Sentry");
