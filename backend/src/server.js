@@ -14,7 +14,7 @@ const app = express();
 const PORT = ENV.PORT;
 
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:5173", credentials: true })); // Enable CORS for all routes
+app.use(cors({ origin: ENV.CLIENT_URL, credentials: true })); // Enable CORS for all routes
 app.use(clerkMiddleware()); //req.auth will be available
 app.get("/debug-sentry", (req, res) => {
   throw new Error("Debug first Sentry");
