@@ -20,7 +20,7 @@ app.get("/debug-sentry", (req, res) => {
   throw new Error("Debug first Sentry");
 });
 app.get("/", (req, res) => {
-  res.send(`Slack Clone Backend PORT ${PORT}`);
+  res.send(`Backend PORT ${PORT}`);
 });
 
 app.use("/api/inngest", serve({ client: inngest, functions })); //handles ingest
